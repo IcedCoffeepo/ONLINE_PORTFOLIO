@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="logz.png"><title>Online Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b11e3122a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logz.png" class="logo">
+            <ul id="sidemenu">
+                <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Hi,</p>
+            <h1>I'm <span>Rosalinda P. Dimaano</span><br></h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="IMG_0974.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hello! I'm Rosalinda Dimaano but most people call me Rosa, I enjoy exploring new ideas, learning about various cultures, and engaging in meaningful conversations. My interests span from technology and literature. Being an IT (Information Technology) student involves studying various aspects of technology, computer systems, software development, networking, cybersecurity, and information management. Being an IT student offers opportunities for learning, growth, and the development of skills that are in high demand in today's digital world. I'm open and excited to connect and share insights with you!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Positive Attittude.</span></li>
+                            <li><span>Ability to drive office communication.</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>
+                                Dalubhasaan ng Lungsod ng Lucena</span><br>2021-Present</li>
+                            <li><span>Calayan Educational Foundation INC.</span><br>2018-2019</li>
+                            <li><span>STI College Lucena</span><br>2017-2018</li>
+                            <li><span>Gulang-Gulang National High School</span><br>2013-2017</li>
+                            <li><span>Zaballero Subd. Elementary School</span><br> 2006-2017</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="works">
+    <div class="container">
+        <h2>MY WORKS</h2>
+        <div class="work-list">
+            <div class="work">
+                <a href="https://icedcoffeepo.github.io/DIMAANO/"><img src="resume.png" alt="HTML tutorial"></a>
+                <div class="layer">
+                    <h3>Online Resume</h3>
+                </div>
+            </div>
+            <div class="work">
+                <a href="https://icedcoffeepo.github.io/responsive/"><img src="respo.png" alt="HTML tutorial"></a>
+                <div class="layer">
+                    <h3>Responsive Landing</h3>
+                </div>
+            </div>
+            <div class="work">
+                <a href="https://icedcoffeepo.github.io/Working-Calculator/"><img src="calcu.png" alt="HTML tutorial"></a>
+                <div class="layer">
+                    <h3>Calculator</h3>
+                </div>
+            </div>
+            <div class="work">
+                <a href="https://icedcoffeepo.github.io/HandsOn1-addEventListener-WS101/"><img src="Dmm.png" alt="HTML tutorial"></a>
+                <div class="layer">
+                    <h3>DOM AddEventListener</h3>
+                </div>
+            </div>
+            <div class="work">
+                <a href="https://icedcoffeepo.github.io/todo-list-app/"><img src="crud.png" alt="HTML tutorial"></a>
+                <div class="layer">
+                    <h3>CRUD Todo List</h3>
+                </div>
+            </div>
+            <div class="work">
+                <a href="https://icedcoffeepo.github.io/HandsOn2-colorChanger-WS101/"><img src="clr chng.png" alt="HTML tutorial"></a>
+                <div class="layer">
+                    <h3>DOM Color Changer</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Contact Info.</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> linadimaano7@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09876543211</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>
